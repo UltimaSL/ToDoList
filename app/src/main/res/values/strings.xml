@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ToDoList</string>
+    <string-array name="tag_options">
+        <item>Personal</item>
+        <item>Trabajo</item>
+        <item>Estudios</item>
+        <item>Compras</item>
+        <item>Urgente</item>
+    </string-array>
+    <string name="tag_input_description">Campo para seleccionar o introducir la etiqueta de la tarea</string>
 </resources>

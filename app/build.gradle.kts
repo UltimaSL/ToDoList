@@ -45,4 +45,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // OkHttp (para solicitudes HTTP a tu API)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    // Para logs de OkHttp (útil para depuración)
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }
