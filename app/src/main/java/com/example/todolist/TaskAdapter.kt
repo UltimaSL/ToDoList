@@ -30,7 +30,7 @@ class TaskAdapter(
         holder.bind(task)
         // Configurar el click listener para el ítem completo
         holder.itemView.setOnClickListener {
-            onTaskClick(task, position) // <-- CAMBIADO: Pasar la posición
+            onTaskClick(task, position)
         }
         // Configurar el click largo listener
         holder.itemView.setOnLongClickListener {
@@ -79,7 +79,7 @@ class TaskAdapter(
                 tagText.visibility = View.GONE
             }
 
-            // <-- CAMBIADO: Usar task.isDone para el icono
+            // Usar task.isDone para el icono
             if (task.isDone) {
                 checkIcon.setImageResource(R.drawable.ic_check_box_checked)
             } else {

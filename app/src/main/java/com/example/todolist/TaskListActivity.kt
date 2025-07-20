@@ -59,7 +59,7 @@ class TaskListActivity : AppCompatActivity() {
         tasksRecyclerView = findViewById(R.id.tasks_list_recycler_view)
         noTasksText = findViewById(R.id.no_tasks_text)
 
-        // <-- CAMBIADO: onTaskClick ahora recibe la posición
+        // onTaskClick ahora recibe la posición
         tasksRecyclerView.layoutManager = LinearLayoutManager(this)
         taskAdapter = TaskAdapter(mutableListOf(), { task, position ->
             // Lógica para clic en una tarea: Toggling del estado 'completada'
@@ -185,7 +185,7 @@ class TaskListActivity : AppCompatActivity() {
             put("id_tarea", updatedTask.id) // ID de la tarea a actualizar
             put("notas_usuario", updatedTask.notes)
             put("etiqueta", updatedTask.tag)
-            put("is_done", updatedTask.isDone) // Enviar el nuevo estado
+            put("is_done", updatedTask.isDone)
         }
         val requestBody = jsonObject.toString().toRequestBody(JSON)
 
@@ -205,8 +205,8 @@ class TaskListActivity : AppCompatActivity() {
                 val responseBody = response.body?.string()
                 runOnUiThread {
                     if (response.isSuccessful) {
-                        // Si la actualización en la API fue exitosa, actualizamos solo el ítem en la UI
-                        taskAdapter.updateTaskState(position, newStatus) // <-- CAMBIADO: Actualizar solo este ítem
+                        // Actualizamos solo el ítem en la UI
+                        taskAdapter.updateTaskState(position, newStatus)
                         Toast.makeText(this@TaskListActivity, "Tarea ${if (newStatus) "completada" else "pendiente"}: ${task.notes}", Toast.LENGTH_SHORT).show()
                     } else {
                         val errorMsg = try {

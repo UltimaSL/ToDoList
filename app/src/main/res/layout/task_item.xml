@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:textColor="#4A4A4A"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toStartOf="@+id/delete_task_button"

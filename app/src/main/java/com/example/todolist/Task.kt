@@ -7,7 +7,7 @@ data class Task(
     val userId: String,
     val notes: String,
     val tag: String,
-    var isDone: Boolean // <-- AÑADIDO: Propiedad para el estado de completada
+    var isDone: Boolean
 ) {
     companion object {
         fun fromJson(json: JSONObject): Task {
@@ -16,7 +16,7 @@ data class Task(
                 userId = json.getString("id_usuario"),
                 notes = json.getString("notas_usuario"),
                 tag = json.optString("etiqueta", ""),
-                isDone = json.optBoolean("is_done", false) // <-- AÑADIDO: Leer el estado is_done del JSON
+                isDone = json.optBoolean("is_done", false)
             )
         }
     }
