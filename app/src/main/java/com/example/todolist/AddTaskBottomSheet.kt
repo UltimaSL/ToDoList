@@ -32,7 +32,7 @@ class AddTaskBottomSheet : BottomSheetDialogFragment() {
     private val JSON = "application/json; charset=utf-8".toMediaType()
 
     // URL base de tu API de Flask (asegúrate de que sea la correcta, local o de Render)
-    private val API_BASE_URL = "http://192.168.5.143:5000" // Para emuladores de Android
+    private val API_BASE_URL = "https://todo-list-api-oekd.onrender.com" // Para emuladores de Android
     // Si usas tu celular real y está en la misma red Wi-Fi, usa la IP de tu computadora (ej. http://192.168.1.X:5000)
 
     // Clave para el argumento del ID de usuario

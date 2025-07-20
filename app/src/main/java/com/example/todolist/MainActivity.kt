@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var registerLink: TextView
 
-    private val API_BASE_URL = "http://192.168.5.143:5000"
+    private val API_BASE_URL = "https://todo-list-api-oekd.onrender.com"
     private val JSON = "application/json; charset=utf-8".toMediaType()
     private val client = OkHttpClient()
 

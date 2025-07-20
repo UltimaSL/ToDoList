@@ -30,7 +30,7 @@ class TaskListActivity : AppCompatActivity() {
     // Cliente OkHttp
     private val client = OkHttpClient()
     // URL base de tu API de Flask (asegúrate de que sea la correcta, local o de Render)
-    private val API_BASE_URL = "http://192.168.5.143:5000" // 10.0.2.2 para emuladores de Android
+    private val API_BASE_URL = "https://todo-list-api-oekd.onrender.com" // 10.0.2.2 para emuladores de Android
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
