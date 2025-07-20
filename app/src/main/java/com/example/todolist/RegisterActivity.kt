@@ -20,7 +20,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var registerButton: Button
 
     // URL base de tu API de Flask (asegúrate de que sea la correcta, local o de Render)
-    private val API_BASE_URL = "http://192.168.5.143:5000" // 10.0.2.2 para emuladores de Android
+    private val API_BASE_URL = "https://todo-list-api-oekd.onrender.com/" // 10.0.2.2 para emuladores de Android
     // Si usas tu celular real y está en la misma red Wi-Fi, usa la IP de tu computadora (ej. http://192.168.1.X:5000)
 
     private val JSON = "application/json; charset=utf-8".toMediaType()
